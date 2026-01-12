@@ -19,9 +19,8 @@ const About = () => {
   return (
     <section id="about" className="about-page-container">
       <div className="about-card">
-        {/* This is the container that will use Flexbox */}
         <div className="about-main-content">
-          <img src="/images/zoe.JPG" alt="Zoe Yau" className="scrapbook-photo" />
+          <img src="/portfolio/images/zoe.JPG" alt="Zoe Yau" className="scrapbook-photo" />
           
           <div className="about-text-block">
             <h3>About Me</h3>

@@ -3,18 +3,18 @@ import { ExternalLink, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const photos = [
-    { id: 1, url: "/photos/ring.JPG", caption: "The Ring" }, 
-    { id: 2, url: "/photos/bridge.jpeg", caption: "City" },
-    { id: 3, url: "/photos/hands.jpeg", caption: "Nature"},
-    { id: 4, url: "/photos/kvShadow.jpeg", caption: "Shadow" }, 
-    { id: 5, url: "/photos/sunrise.jpeg", caption: "Sunrise" },
-    { id: 6, url: "/photos/NOShadow.jpeg", caption: "Nature"},
-    { id: 7, url: "/photos/mermaid.jpeg", caption: "The Ring" }, 
-    { id: 8, url: "/photos/blueBeach.jpeg", caption: "City" },
-    { id: 9, url: "/photos/sofia.jpeg", caption: "Nature"},
-    { id: 10, url: "/photos/MO.jpeg", caption: "The Ring" }, 
-    { id: 11, url: "/photos/met.jpeg", caption: "City" },
-    { id: 12, url: "/photos/soho.jpeg", caption: "Nature"},
+    { id: 1, url: "/portfolio/photos/ring.JPG", caption: "The Ring" }, 
+    { id: 2, url: "/portfolio/photos/bridge.jpeg", caption: "City" },
+    { id: 3, url: "/portfolio/photos/hands.jpeg", caption: "Nature"},
+    { id: 4, url: "/portfolio/photos/kvShadow.jpeg", caption: "Shadow" }, 
+    { id: 5, url: "/portfolio/photos/sunrise.jpeg", caption: "Sunrise" },
+    { id: 6, url: "/portfolio/photos/NOShadow.jpeg", caption: "Nature"},
+    { id: 7, url: "/portfolio/photos/mermaid.jpeg", caption: "The Ring" }, 
+    { id: 8, url: "/portfolio/photos/blueBeach.jpeg", caption: "City" },
+    { id: 9, url: "/portfolio/photos/sofia.jpeg", caption: "Nature"},
+    { id: 10, url: "/portfolio/photos/MO.jpeg", caption: "The Ring" }, 
+    { id: 11, url: "/portfolio/photos/met.jpeg", caption: "City" },
+    { id: 12, url: "/portfolio/photos/soho.jpeg", caption: "Nature"},
 ];
 
 const Photography = () => {
