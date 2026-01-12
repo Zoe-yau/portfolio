@@ -179,32 +179,6 @@ canvas {
 }
 
 /* Navbar */
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .navbar {
-    padding: 15px 20px; /* Reduce padding on small screens */
-  }
-
-  .nav-links {
-    display: none; /* Hide links by default on mobile */
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background: #E0F2FE;
-    padding: 20px;
-  }
-
-  /* Show links when a 'mobile-active' class is added via JavaScript */
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links a {
-    margin: 10px 0; /* Space links vertically */
-  }
-}
 
 .navbar {
   position: fixed;
@@ -216,6 +190,11 @@ canvas {
   background: #E0F2FE; 
   backdrop-filter: blur(10px);
   z-index: 1000;
+  box-sizing: border-box;
+}
+
+.nav-links {
+  display: flex; 
 }
 
 .nav-links a {
@@ -231,6 +210,35 @@ canvas {
   gap: 10px;           
   font-weight: bold;
 }
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px; 
+  }
+
+  .nav-links {
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #E0F2FE;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);   
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    margin: 10px 0; 
+    margin-left: 0;
+  }
+}
+
 
 .logo-img {
   width: 35px;         
