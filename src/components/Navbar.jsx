@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link'; 
 
 const Navbar = () => {
     return (
@@ -8,9 +9,9 @@ const Navbar = () => {
           PORTFOLIO
         </div>
         <div className="nav-links">
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
+          <HashLink smooth to="/#about">About</HashLink>
+          <HashLink smooth to="/#projects">Projects</HashLink>
+          <HashLink smooth to="/#contact">Contact</HashLink>
           <Link to="/photography">Photography</Link>
         </div>
       </nav>
