@@ -23,7 +23,7 @@ const About = () => {
           <div className="about-text-block">
             <h3>About Me</h3>
             <p className="about-text">Hi! I'm Zoe, a Computer Science student at Texas A&M University with minors in business and math. </p>
-            <p>I specialize in building high-performance, user-focused solutions through innovation and process optimization. With a technical toolkit spanning JavaScript, Python, and React, I thrive in fast-paced, collaborative environments where I can apply my analytical skills to solve complex problems.</p>
+            <p>I specialize in building high-performance, user-focused solutions through innovation and process optimization. With a technical toolkit spanning JavaScript, Python, and React. I thrive in fast-paced, collaborative environments where I can apply my analytical skills to solve complex problems.</p>
           </div>
         </div>
 
