@@ -4,7 +4,7 @@ const Navbar = () => {
     return (
       <nav className="navbar">
         <div className="nav-logo">
-          <img src="/images/dolphinLogo.png" alt="Zoe Yau" className="logo-img" />
+          <img src="/portfolio/images/dolphinLogo.png" alt="Zoe Yau" className="logo-img" />
           PORTFOLIO
         </div>
         <div className="nav-links">
