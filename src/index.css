@@ -220,10 +220,10 @@ canvas {
   }
 
   .nav-links {
-    display: flex; 
+    display: none; 
     flex-direction: column;
     position: absolute;
-    top: 60px;
+    top: 100%;
     left: 0;
     width: 100%;
     background: #E0F2FE;
@@ -243,6 +243,20 @@ canvas {
   }
 }
 
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #000E29;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+}
 
 .logo-img {
   width: 35px;         
