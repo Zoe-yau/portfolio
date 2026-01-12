@@ -179,6 +179,33 @@ canvas {
 }
 
 /* Navbar */
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px; /* Reduce padding on small screens */
+  }
+
+  .nav-links {
+    display: none; /* Hide links by default on mobile */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #E0F2FE;
+    padding: 20px;
+  }
+
+  /* Show links when a 'mobile-active' class is added via JavaScript */
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    margin: 10px 0; /* Space links vertically */
+  }
+}
+
 .navbar {
   position: fixed;
   top: 0;
