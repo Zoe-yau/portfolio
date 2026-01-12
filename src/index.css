@@ -525,6 +525,9 @@ canvas {
   .phone-number {
     font-size: 0.9rem; 
   }
+  .email {
+    font-size: 0.9rem;
+  }
 }
 
 .social-row {
