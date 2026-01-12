@@ -69,7 +69,7 @@ const About = () => {
           <div className="badge-container">
             {skills.interests.map((interest) => (
               interest === "Photography" ? (
-                <a key={interest} href="/portfolio/photography" className="skill-badge-link">
+                <a key={interest} href="/portfolio/#/photography" className="skill-badge-link">
                   <SkillBadge name={interest} />
                 </a>
               ) : (
