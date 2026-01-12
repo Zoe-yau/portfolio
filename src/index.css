@@ -401,6 +401,22 @@ canvas {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
+.skill-badge-link {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.skill-badge-link .skill-badge {
+  background-color: #dbeafe; /* Light blue to make the link stand out */
+  color: #1e40af;
+  border: 1px solid #bfdbfe;
+  cursor: pointer;
+}
+
+.skill-badge-link .skill-badge:hover {
+  background-color: #1e40af;
+  color: #ffffff;
+}
 
 @media (max-width: 768px) {
   .about-footer-lists {

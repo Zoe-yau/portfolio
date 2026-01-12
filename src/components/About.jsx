@@ -6,7 +6,8 @@ const About = () => {
     frameworks: ["React", "Node.js", "API Integration"],
     tools: ["GitHub", "Linux", "Microsoft Office"],
     fundamentals: ["Algorithm Design", "Data Structures"],
-    softSkills: ["Analytical Skills", "Communication", "Collaboration", "Leadership", "Adaptability", "Problem Solving"]
+    softSkills: ["Analytical Skills", "Communication", "Collaboration", "Leadership", "Adaptability", "Problem Solving"],
+    interests: ["Photography", "Swimming", "Art"]
   };
 
   const SkillBadge = ({ name }) => (
@@ -63,10 +64,25 @@ const About = () => {
             </div>
           </div>
 
+
+        <div className="skill-column">
+          <h4 className="flex items-center gap-2"><Heart size={18} /> Personal Interests</h4>
+          <div className="badge-container">
+            {skills.interests.map((interest) => (
+              interest === "Photography" ? (
+                <a key={interest} href="/portfolio/photography" className="skill-badge-link">
+                  <SkillBadge name={interest} />
+                </a>
+              ) : (
+                <SkillBadge key={interest} name={interest} />
+              )
+            ))}
+          </div>
+        </div>
+
         </div>
       </div>
     </section>
-    
   );
 };
 
