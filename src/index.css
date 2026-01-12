@@ -403,7 +403,12 @@ canvas {
 
 .skill-badge-link {
   text-decoration: none;
-  display: inline-block;
+  cursor: pointer;
+}
+
+.skill-badge-link:hover .skill-badge {
+  background-color: #3b82f6;
+  color: white;
 }
 
 .skill-badge-link .skill-badge {
@@ -411,11 +416,6 @@ canvas {
   color: #1e40af;
   border: 1px solid #bfdbfe;
   cursor: pointer;
-}
-
-.skill-badge-link .skill-badge:hover {
-  background-color: #1e40af;
-  color: #ffffff;
 }
 
 @media (max-width: 768px) {
