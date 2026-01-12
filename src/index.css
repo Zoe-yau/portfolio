@@ -352,46 +352,53 @@ canvas {
 }
 
 .about-footer-lists {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-  border-top: 2px dashed #E1EFFE;
-  padding-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px dashed #e2e8f0; 
 }
-
 .skill-column {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; 
 }
 
 .skill-column h4 {
-  color: #3182CE;
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-  text-align: left;
+  color: #3b82f6; 
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .badge-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .skill-badge {
-  background-color: #EBF8FF; 
-  color: #2B6CB0;          
-  padding: 6px 12px;
-  border-radius: 20px;
+  background-color: #f1f5f9; /* Light grey background */
+  color: #475569; /* Slate text */
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
-  border: 1px solid #BEE3F8;
   transition: all 0.2s ease;
+  border: 1px solid transparent;
 }
 
 .skill-badge:hover {
-  background-color: #3182CE;
-  color: white;
+  background-color: #ffffff;
+  border-color: #3b82f6;
+  color: #3b82f6;
   transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 
