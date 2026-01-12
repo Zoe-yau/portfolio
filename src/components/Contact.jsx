@@ -9,7 +9,7 @@ const Contact = () => {
         <div className="contact-info">
           <p><User size={20} /> <strong>Name:</strong> Zoe Yau</p>
           <p><Mail size={20} /> <strong>Email:</strong> <a href="mailto:zoeyau99@yahoo.com">zoeyau99@yahoo.com</a></p>
-          <p><Phone size={20} /> <strong>Phone:</strong> (469) 207-4058</p>
+          <p class="phone-number"><Phone size={20} /> <strong>Phone:</strong> (469) 207-4058</p>
           
           <p className="social-row">
             <strong>Social:</strong> 

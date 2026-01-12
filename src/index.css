@@ -517,6 +517,16 @@ canvas {
   font-weight: 600;
 }
 
+.phone-number {
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .phone-number {
+    font-size: 0.9rem; 
+  }
+}
+
 .social-row {
   display: flex;
   align-items: center;
