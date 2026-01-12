@@ -1,4 +1,4 @@
-import { Code, Database, Settings, BookOpen, Users } from "lucide-react";
+import { Code, Database, Settings, BookOpen, Users, Heart } from "lucide-react";
 
 const About = () => {
   const skills = {
@@ -63,7 +63,6 @@ const About = () => {
               {skills.softSkills.map(skill => <SkillBadge key={skill} name={skill} />)}
             </div>
           </div>
-
 
         <div className="skill-column">
           <h4 className="flex items-center gap-2"><Heart size={18} /> Personal Interests</h4>
