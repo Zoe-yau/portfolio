@@ -67,8 +67,8 @@ const Projects = () => {
             </div>
 
             <div className="project-info">
-            <h3>{project.title}</h3>
-            <p className="project-description">{project.description}</p>
+              <h3>{project.title}</h3>
+              <p className="project-description">{project.description}</p>
             
             <div className="tags-container">
               {project.tags.map((tag, index) => (

@@ -70,18 +70,31 @@ p {
   line-height: 1.5;
 }
 
+.mobile-actions {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .hover-overlay {
     display: none !important;
   }
 
   .mobile-actions {
-    display: flex;
-    margin-top: 12px;
+    display: flex; 
+    margin-top: 15px;
   }
 
   .mobile-github-link {
     display: none;
+  }
+
+  .mobile-github-link a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #004B7B; 
+    font-weight: 600;
   }
 
   @media (max-width: 768px) {
