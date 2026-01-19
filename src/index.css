@@ -70,6 +70,29 @@ p {
   line-height: 1.5;
 }
 
+@media (max-width: 768px) {
+  .hover-overlay {
+    display: none !important;
+  }
+
+  .mobile-actions {
+    display: flex;
+    margin-top: 12px;
+  }
+
+  .mobile-github-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: #24292e;
+    color: white;
+    border-radius: 6px;
+    font-size: 14px;
+    text-decoration: none;
+  }
+}
+
 .tags-container {
   display: flex;
   flex-wrap: wrap;

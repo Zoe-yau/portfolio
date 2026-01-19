@@ -42,7 +42,10 @@ const Rig = () => {
 const Wave3D = () => {
   return (
     <div style={{ height: "100%", width: "100%", minHeight: "500px" }}>
-      <Canvas camera={{ position: [0, 2, 10], fov: 40 }}>
+      <Canvas 
+        camera={{ position: [0, 2, 10], fov: 40 }}
+        style={{ touchAction: 'pan-y' }} 
+      >
         <Suspense fallback={null}>
           <ambientLight intensity={0.6} />
           <directionalLight position={[5, 10, 5]} intensity={1.5} />
