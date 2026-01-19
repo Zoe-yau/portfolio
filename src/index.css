@@ -172,10 +172,11 @@ p {
   width: 100% !important;
   height: 100% !important;
   display: block;
+  -webkit-overflow-scrolling: touch;
 }
 
 canvas {
-  touch-action: none; 
+  touch-action: pan-y; 
 }
 
 /* Navbar */
