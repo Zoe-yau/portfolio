@@ -8,22 +8,31 @@ const WaveMesh = () => {
   useFrame(({ clock }) => {
     if (!meshRef.current) return;
     const time = clock.getElapsedTime();
-    const positions = meshRef.current.geometry.attributes.position.array;
+    const pos = meshRef.current.geometry.attributes.position;
 
-    for (let i = 0; i < positions.length; i += 3) {
-      const x = positions[i];
-      positions[i + 2] = Math.sin(x * 0.4 + time) * 0.5;
+    const pa = pos.array;
+
+    for (let i = 0; i < pa.length; i += 3) {
+      const x = pa[i];
+      const y = pa[i + 1];
+      
+      const wave1 = Math.sin(x * 0.3 + time) * 0.4;
+      const wave2 = Math.sin(y * 0.5 + time * 1.2) * 0.2;
+      
+      pa[i + 2] = wave1 + wave2;
     }
-    meshRef.current.geometry.attributes.position.needsUpdate = true;
+    
+    pos.needsUpdate = true;
   });
 
   return (
-    <mesh ref={meshRef} rotation={[-Math.PI / 2.2, 0, 0]} position={[0, 1.0, 0]}>
-      <planeGeometry args={[30, 15, 64, 64]} />
+    <mesh ref={meshRef} rotation={[-Math.PI / 2.2, 0, 0]} position={[0, 0, 0]}>
+      <planeGeometry args={[40, 20, 128, 128]} />
       <meshStandardMaterial 
-        color="#003366" 
-        roughness={0.3}
-        metalness={0.2}
+        color="#004B7B" 
+        roughness={0.2}
+        metalness={0.1}
+        wireframe={false} 
       />
     </mesh>
   );
@@ -32,8 +41,7 @@ const WaveMesh = () => {
 const Rig = () => {
   useFrame((state) => {
     const t = state.clock.getElapsedTime();
-    state.camera.position.x = THREE.MathUtils.lerp(state.camera.position.x, Math.sin(t * 0.3) * 1.5, 0.05);
-    state.camera.position.y = THREE.MathUtils.lerp(state.camera.position.y, 2 + Math.cos(t * 0.5) * 0.4, 0.05);
+    state.camera.position.lerp(new THREE.Vector3(Math.sin(t * 0.1) * 1, 2, 8), 0.02);
     state.camera.lookAt(0, 0, 0);
   });
   return null;
@@ -41,15 +49,15 @@ const Rig = () => {
 
 const Wave3D = () => {
   return (
-    <div style={{ height: "100%", width: "100%", minHeight: "500px" }}>
+    <div className="wave-wrapper">
       <Canvas 
-        camera={{ position: [0, 2, 10], fov: 40 }}
-        style={{ touchAction: 'pan-y' }} 
+        camera={{ position: [0, 5, 10], fov: 45 }}
+        dpr={[1, 2]}
       >
         <Suspense fallback={null}>
-          <ambientLight intensity={0.6} />
-          <directionalLight position={[5, 10, 5]} intensity={1.5} />
-          <pointLight position={[-10, -5, 5]} intensity={1} color="#add8e6" />
+          <ambientLight intensity={0.7} />
+          <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={2} />
+          <pointLight position={[-10, -5, -10]} color="#7dd3fc" intensity={1} />
           
           <WaveMesh />
           <Rig />

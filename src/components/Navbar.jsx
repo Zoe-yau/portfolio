@@ -7,21 +7,25 @@ const Navbar = () => {
 
     return (
       <nav className="navbar">
-        <div className="nav-logo">
-          <img src="/portfolio/images/dolphinLogo.png" alt="Zoe Yau" className="logo-img" />
-          PORTFOLIO
-        </div>
+        <HashLink smooth to="/#hero" className="nav-logo" onClick={() => setIsOpen(false)}>
+          <img src="/portfolio/images/dolphinLogo.png" alt="Dolphin Logo" className="logo-img" />
+          <span>PORTFOLIO</span>
+        </HashLink>
 
-        <button className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>
+        <button 
+          className="menu-toggle" 
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
+        >
           {isOpen ? '✕' : '☰'}
         </button>
 
-        <div className={`nav-links ${isOpen ? 'active' : ''}`}>
-          <HashLink smooth to="/#about" onClick={() => setIsOpen(false)}>About</HashLink>
-          <HashLink smooth to="/#projects" onClick={() => setIsOpen(false)}>Projects</HashLink>
-          <HashLink smooth to="/#contact" onClick={() => setIsOpen(false)}>Contact</HashLink>
-          <Link to="/photography" onClick={() => setIsOpen(false)}>Photography</Link>
-        </div>
+        <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
+          <li><HashLink smooth to="/#about" onClick={() => setIsOpen(false)}>About</HashLink></li>
+          <li><HashLink smooth to="/#projects" onClick={() => setIsOpen(false)}>Projects</HashLink></li>
+          <li><HashLink smooth to="/#contact" onClick={() => setIsOpen(false)}>Contact</HashLink></li>
+          <li><Link to="/photography" onClick={() => setIsOpen(false)}>Photography</Link></li>
+        </ul>
       </nav>
     );
 };

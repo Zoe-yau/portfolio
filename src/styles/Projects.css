@@ -1,0 +1,140 @@
+.projects-section {
+    padding: 80px 20px;
+    background-color: #ffffff; 
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #000E29;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .project-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .image-container {
+    position: relative;
+    height: 200px;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .hover-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 75, 123, 0.85); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(2px);
+  }
+  
+  .overlay-buttons {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .overlay-btn {
+    background: white;
+    color: #004B7B;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    transition: transform 0.2s;
+  }
+  
+  .overlay-btn:hover {
+    transform: scale(1.05);
+  }
+  
+  .project-info {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project-description {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 10px 0;
+    line-height: 1.6;
+  }
+  
+  .tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto; /* Pushes tags to the bottom */
+    padding-top: 15px;
+  }
+  
+  .tag {
+    background: #E0F2FE;
+    color: #004B7B;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+  }
+  
+  /* Mobile Actions Logic */
+  .mobile-actions {
+    display: none; /* Hidden on Desktop */
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .mobile-link {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #004B7B;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  
+  @media (max-width: 768px) {
+    .hover-overlay {
+      display: none !important; /* No hover on mobile */
+    }
+    
+    .mobile-actions {
+      display: flex;
+    }
+  
+    .section-title {
+      font-size: 2rem;
+    }
+  }
