@@ -81,15 +81,16 @@ p {
   }
 
   .mobile-github-link {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 12px;
-    background: #24292e;
-    color: white;
-    border-radius: 6px;
-    font-size: 14px;
-    text-decoration: none;
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .mobile-github-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 10px;
+    }
   }
 }
 

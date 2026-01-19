@@ -77,9 +77,11 @@ const Projects = () => {
             </div>
 
             <div className="mobile-actions">
-              <a href={project.githubUrl} target="_blank" rel="noreferrer" className="mobile-github-link">
-                <Github size={16} /> GitHub
-              </a>
+              <div className="mobile-github-link">
+                <a href={project.githubUrl} target="_blank" rel="noreferrer">
+                  <Github size={18} /> GitHub
+                </a>
+              </div>
             </div>
           </div>
           </motion.div>
