@@ -29,6 +29,17 @@ const projects = [
       demoUrl: "https://zoe-yau.github.io/maroonRecs/",
       githubUrl: "https://github.com/Zoe-yau/maroonRecs",
     },
+
+    {
+      id: 4,
+      title: "Swift Connect",
+      description: "A high-performance flight simulator that helps airline managers to navigate crises through interactive real-time network visualizations.",
+      image: "/portfolio/projects/swiftConnect.png",
+      tags: ["HTML", "CSS", "Javascript"],
+      githubUrl: "https://github.com/joshuawlee/TAMU_HACK_26",
+    },
+
+
   ];
   
   const Projects = () => {

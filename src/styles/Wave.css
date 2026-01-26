@@ -18,4 +18,5 @@
 
 canvas {
   transform: scale(1.1);
+  touch-action: pan-y; 
 }
